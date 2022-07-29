@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gods/arrayqueue"
 	"gods/arraystack"
 	"gods/linkedstack"
 )
@@ -20,6 +21,14 @@ func main() {
 	ls := linkedstack.New()
 	ls.Push(1).Push(2).Push(3).Push(-1)
 	for v := ls.Pop(); v != nil; v = ls.Pop() {
+		fmt.Println(v)
+	}
+
+	// demo3
+	fmt.Println("array queue")
+	aq := arrayqueue.New()
+	aq.Push(1).Push(2).Push(3).Push(-1)
+	for v := aq.Pop(); v != nil; v = aq.Pop() {
 		fmt.Println(v)
 	}
 }
