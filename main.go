@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"gods/arrayqueue"
 	"gods/arraystack"
+	"gods/linkedqueue"
 	"gods/linkedstack"
 )
 
@@ -29,6 +30,14 @@ func main() {
 	aq := arrayqueue.New()
 	aq.Push(1).Push(2).Push(3).Push(-1)
 	for v := aq.Pop(); v != nil; v = aq.Pop() {
+		fmt.Println(v)
+	}
+
+	// demo4
+	fmt.Println("linked queue")
+	lq := linkedqueue.New()
+	lq.Push(1).Push(2).Push(3).Push(-1)
+	for v := lq.Pop(); v != nil; v = lq.Pop() {
 		fmt.Println(v)
 	}
 }
